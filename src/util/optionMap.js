@@ -1,4 +1,6 @@
 export default [
   'bounce',
-  'flash'
+  'flash',
+  'float',
+  'code'
 ]

@@ -25,3 +25,57 @@
         transform: translate3d(0, -4px, 0);
     }
 }
+
+.code {
+    animation: code 2s steps(9);
+    width: 9ch;
+}
+
+@keyframes code {
+    from {
+        width: 0;
+    }
+}
+
+.box-float {
+    position: relative;
+    align-items: center;
+    height: 200px;
+    width: 200px;
+    background-color: rgb(118, 218, 255);
+    overflow: hidden;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        min-width: 160px;
+        min-height: 160px;
+        background-color: #fff;
+        animation-name: rotate;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    &:before {
+        border-radius: 45%;
+        animation-duration: 10s;
+    }
+    &:after {
+        border-radius: 48%;
+        animation-duration: 10s;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: translate(0, 0) rotate3d(0, 0, 1, 0);
+    }
+    50% {
+        transform: translate(0, -2%) rotate3d(0, 0, 1, 180deg);
+    }
+
+    100% {
+        transform: translate(0, 0) rotate3d(0, 0, 1, 360deg);
+    }
+}
